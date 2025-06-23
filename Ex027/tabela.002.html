@@ -14,6 +14,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         td, th {
@@ -21,15 +22,38 @@
             padding: 10px;
         }
 
+        thead > tr  > th {
+            position: sticky;
+            top: -1px;
+            background-color: #383838;
+        }
+
         thead, tfoot {
             background-color: gray;
             color: white;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: rgb(231, 223, 223);
+
+        }
+        
+        td.num {
+            width: 100px;
+            text-align: center;
+        }
+        tbody >tr:nth-child(2n) {
+            background-color: lightgray;
         }
     </style>
     <h1>Uso de tabelas grandes</h1>
     <!--
     ANATOMIA PARA TABELAS GRANDES 
     TABLE
+     CAPTION
      THEAD
         TR, TD, TH
       TBODY
@@ -39,32 +63,94 @@
         
     --> 
    <table>
+    <caption>População
+        Das Unidades Federativas
+    </caption>
     <thead>
         <tr>
-             <th>Estado</th>
-             <th>População</th>
+             <th scope="col">Estado</th>
+             <th scope="col">População</th>
         </tr>
     </thead>
    <tbody> 
         <tr>
             <td>São paulo</td>
-            <td>45 919 049</td>
+            <td class="num">45 919 049</td>
         </tr>
         <tr>
             <td>Minas Gerais</td>
-             <td>21 168 792</td>
+             <td class="num">21 168 792</td>
         </tr>
         <tr>
             <td>Rio de Janeiro</td>
-            <td>17 264 943</td>
+            <td class="num">17 264 943</td>
         </tr>
+            <tr><td>Bahia</td>
+        <td class="num">45 973 194</td>	</tr>
 
-
+            
+            <tr><td>Paraná</td>
+            <td class="num">21 322 691</td>	</tr>
+            
+            <tr><td>Rio Grande Do Sul</td>
+            <td class="num">17 219 679</td>	</tr>
+            
+            <tr><td>Pernambuco</td>
+            <td class="num">14 850 513</td>	</tr>
+            
+            <tr><td>Ceará</td>
+            <td class="num">11 824 665</td>	</tr>
+            
+            <tr><td>Pará</td>
+            <td class="num">11 229 915</td>	</tr>
+            
+            <tr><td>Santa Catarina</td>
+            <td class="num">9 539 029</td>	</tr>
+            
+            <tr><td>Goiá</td>
+            <td class="num">9 233 656</td>	</tr>
+            
+            <tr><td>Maranhão</td>
+            <td class="num">8 664 306</td>	</tr>
+            
+            <tr><td>Amazonas</td>
+            <td class="num">8 058 441</td>	</tr>
+            
+            <tr><td>Paraiba</td>
+            <td class="num">7 350 483</td>	</tr>
+            
+            <tr><td>Espirito Santo</td>
+            <td class="num">7 010 960</td>	</tr>
+            
+            <tr><td>Mato Grosso</td>
+            <td class="num">4 281 209</td>	</tr>
+            
+            <tr><td>Rio Grande Do Norte</td>
+            <td class="num">4 145 040</td>	</tr>
+            
+            <tr><td>Sergipe</td>
+            <td class="num">4 102 129</td>	</tr>
+            
+            <tr><td>Rondônia</td>
+            <td class="num">3 836 399</td>	</tr>
+            
+            <tr><td>Tocatins</td>
+            <td class="num">3 446 071</td>	</tr>
+            
+            <tr><td>Acre</td>
+            <td class="num">3 375 646</td>	</tr>
+            
+            <tr><td>Amapá</td>
+            <td class="num">3 220 104</td>	</tr>
+            
+            <tr><td>Roraima</td>
+            <td class="num">2 982 818</td>	</tr>
+ 
    </tbody>
    <tfoot>
        <tr>
-        <th>Total de Habitantes</th>
-        <td>0000</td>
+        <th scope="rom">Total de Habitantes</th>
+        <td class="num">212 583 750</td>
        </tr>
 
    </tfoot>
