@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Exemplo Menu - gap / padding / margin</title>
+<style>
+  body { font-family: system-ui, Arial; margin: 0; background:#f5f7fa; }
+
+  /* NAV PRINCIPAL */
+  nav {
+    display: flex;             /* permite usar gap */
+    justify-content: center;
+    align-items: center;
+    gap: 32px;                 /* espaço entre os itens - minha opção favorita */
+    background: #222;
+    padding: 12px 16px;        /* espaço dentro da barra */
+    position: sticky;
+    top: 0;
+  }
+
+  /* LINKS */
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;         /* aumenta área clicável */
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background .15s, transform .15s;
+  }
+
+  nav a:hover {
+    background: rgba(255,255,255,0.06);
+    transform: translateY(-2px);
+  }
+
+  /* alternativa: usar margin em vez de gap (se não usar flex) */
+  .use-margin nav a {
+    margin: 0 18px;            /* cria espaço ao redor de cada link */
+  }
+
+  /* exemplo de espaçamento entre palavras dentro de um link (rare) */
+  .word-spacing-example a {
+    word-spacing: 6px;
+  }
+
+  /* responsivo simples: empilha os links em telas pequenas */
+  @media (max-width: 600px) {
+    nav {
+      flex-direction: column;
+      gap: 12px;
+      padding: 14px 10px;
+    }
+  }
+  div {
+    background-color: white;
+      box-shadow: 0 4px 10px rgba(10, 170, 37, 0.253);
+    border-radius: 5vh;
+    padding: 10px;
+    padding-bottom: 10px;
+    height: 270px;
+    width: 270px;
+    font-size: 16px;
+    margin: 100px;
+    text-align: center;
+    
+  }
+
+   h2 { 
+    
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 250;
+    height: 30px;
+
+
+    
+
+    
+   }
+
+  /* só estética para a página */
+  main { max-width: 900px; margin: 30px auto; padding: 0 16px; }
+  h1 { color:#2e7d32; text-align:center; }
+</style>
+</head>
+<body>
+
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#contato">Contato</a>
+    <a href="#blog">Blog</a>
+  </nav>
+
+  <main>
+    <h1>Teste do Menu</h1>
+    <div><h2 id="h2">Sobre mim</h2>
+        Sou um programador iniciante apaixonado por tecnologia e sempre em busca de aprender coisas novas. Gosto de praticar, testar ideias e transformar pequenos projetos em oportunidades de crescimento. Cada desafio é uma chance de evoluir e adquirir mais experiência.</div>
+  </main>
+
+</body>
+</html>
